@@ -22,7 +22,7 @@ fi
 
 if [[ $COMMAND = "restore" ]]; then
     BACKUP=$2
-    DIRECTORY=$(dirname $BACKUP)
+    DIRECTORY=$(cd $(dirname $BACKUP);pwd)
     FILE=$(basename $BACKUP)
     VOLUME=$3
     
