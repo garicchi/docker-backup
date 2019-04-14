@@ -1,4 +1,5 @@
 # docker-backup
+This script executes backup or restore docker named volume
 
 ## SETUP
 
