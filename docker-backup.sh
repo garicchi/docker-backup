@@ -15,7 +15,7 @@ COMMAND=$1
 if [[ $COMMAND = "backup" ]]; then
     VOLUME=$2
     DEST=$3
-    docker run -it --rm -v $VOLUME:/volume -v $DEST:/backup alpine ¥
+    docker run -it --rm -v $VOLUME:/volume -v $DEST:/backup alpine \
            tar -jcvf /backup/$VOLUME.tar.bz2 -C /volume/ ./
     exit 0
 fi
@@ -26,7 +26,7 @@ if [[ $COMMAND = "restore" ]]; then
     FILE=$(basename $BACKUP)
     VOLUME=$3
     
-    docker run -it --rm  -v $VOLUME:/volume -v $DIRECTORY:/backup alpine ¥
+    docker run -it --rm  -v $VOLUME:/volume -v $DIRECTORY:/backup alpine \
            sh -c "rm -rf /volume/*;tar -xvf /backup/$FILE -C /volume/"
     exit 0
 fi
