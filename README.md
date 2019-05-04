@@ -5,7 +5,7 @@ This script executes backup or restore docker named volume
 
 install
 ```
-curl -L -o /usr/local/bin/docker-backup https://raw.githubusercontent.com/garicchi/docker-backup/master/docker-backup.sh&&chmod u+x /usr/local/bin/docker-backup&&chown `whoami` /usr/local/bin/docker-backup
+curl -L -o /usr/local/bin/docker-backup https://raw.githubusercontent.com/garicchi/docker-backup/master/docker-backup.sh&&sudo chmod u+x /usr/local/bin/docker-backup&&sudo chown `whoami` /usr/local/bin/docker-backup
 ```
 
 uninstall
